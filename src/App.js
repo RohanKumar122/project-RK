@@ -78,7 +78,7 @@ export default function BusinessLandingPage() {
         <div className="container mx-auto flex justify-between items-center">
           <div className="flex items-center space-x-4">
             <div className="text-2xl font-bold">
-              {activeTab === 'materials' ? 'Construction Masters' : 'Prime Events'}
+              {activeTab === 'materials' ? 'R.K. Building Materials' : 'Raj Tent And Caterers'}
             </div>
           </div>
           
@@ -114,7 +114,7 @@ export default function BusinessLandingPage() {
       </nav>
       
       {/* Hero Section with Business Toggle */}
-      <section ref={homeRef} className={`relative ${activeTab === 'materials' ? 'bg-gradient-to-r from-blue-800 to-blue-600' : 'bg-gradient-to-r from-red-700 to-red-500'} text-white py-16 transition-all duration-500`}>
+      <section ref={homeRef} className={`relative ${activeTab === 'materials' ? 'bg-gradient-to-r from-yellow-400 to-yellow-200' : 'bg-gradient-to-r from-blue-400 to-blue-200'} ${activeTab === 'materials' ? 'bg-gradient-to-r from-blue-800 to-blue-600' : 'bg-gradient-to-r from-red-700 to-red-500'} text-black py-16 transition-all duration-500`}>
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row items-center justify-between">
             <div className="md:w-1/2 mb-8 md:mb-0">
