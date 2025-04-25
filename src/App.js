@@ -196,7 +196,7 @@ export default function BusinessLandingPage() {
       {/* Products Section */}
       <section ref={productsRef} className="py-16 bg-white">
         <div className="container mx-auto px-4">
-          <h2 className={`text-3xl font-bold text-center mb-12 border-b-4 ${activeTab === 'materials' ? 'border-blue-600' : 'border-red-600'} pb-2 inline-block transition-all duration-300`}>
+          <h2 className={`text-3xl font-bold text-center mb-12 border-b-4 ${activeTab === 'materials' ? 'border-blue-600' : 'border-blue-600'} pb-2 inline-block transition-all duration-300`}>
             {activeTab === 'materials' ? 'Our Building Materials' : 'Our Services'}
           </h2>
           
@@ -205,42 +205,45 @@ export default function BusinessLandingPage() {
               <>
                 <div className="bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-500 hover:scale-105 hover:shadow-xl">
                   <div className="h-48 bg-gray-300 flex items-center justify-center">
-                    <span>Premium Cement</span>
+                    {/* <span>Premium Cement</span> */}
+                    <img src="/Images/ultratech-bori2.jpg" alt="Premium Cement" className="w-full h-full object-cover" />
                   </div>
                   <div className="p-6">
-                    <h3 className="text-xl font-bold mb-2">Premium Cement</h3>
+                    <h3 className="text-xl font-bold mb-2">Ultratech Cement</h3>
                     <p className="text-gray-700 mb-4">High-quality cement for all construction needs, available in various types including OPC, PPC, and more.</p>
                     <div className="flex justify-between items-center">
-                      <span className="text-blue-600 font-bold">₹350/bag</span>
-                      <button className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition-colors duration-300">View Details</button>
+                      <span className="text-red-600 font-bold">₹400/bag</span>
+                      <button className="bg-yellow-400 text-black font-bold px-4 py-2 rounded hover:bg-yellow-700 transition-colors duration-300">View Details</button>
                     </div>
                   </div>
                 </div>
                 
                 <div className="bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-500 hover:scale-105 hover:shadow-xl">
                   <div className="h-48 bg-gray-300 flex items-center justify-center">
-                    <span>Steel Reinforcement</span>
+                    {/* <span>Steel Reinforcement</span> */}
+                    <img src="/Images/acc-bori3.jpg" alt="Premium Cement" className="w-full h-full object-cover" />
                   </div>
                   <div className="p-6">
-                    <h3 className="text-xl font-bold mb-2">Steel Reinforcement</h3>
+                    <h3 className="text-xl font-bold mb-2">ACC Cement</h3>
                     <p className="text-gray-700 mb-4">High-tensile steel bars for reinforced concrete structures, available in various sizes.</p>
                     <div className="flex justify-between items-center">
-                      <span className="text-blue-600 font-bold">₹65/kg</span>
-                      <button className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition-colors duration-300">View Details</button>
+                      <span className="text-red-600 font-bold">₹350/kg</span>
+                      <button className="bg-yellow-400 text-black font-bold px-4 py-2 rounded hover:bg-yellow-700 transition-colors duration-300">View Details</button>
                     </div>
                   </div>
                 </div>
                 
                 <div className="bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-500 hover:scale-105 hover:shadow-xl">
                   <div className="h-48 bg-gray-300 flex items-center justify-center">
-                    <span>Bricks & Blocks</span>
+                    {/* <span>Bricks & Blocks</span> */}
+                    <img src="/Images/acc-bori3.jpg" alt="Premium Cement" className="w-full h-full object-cover" />
                   </div>
                   <div className="p-6">
                     <h3 className="text-xl font-bold mb-2">Bricks & Blocks</h3>
                     <p className="text-gray-700 mb-4">Quality clay bricks, fly ash bricks, and concrete blocks for sturdy construction.</p>
                     <div className="flex justify-between items-center">
-                      <span className="text-blue-600 font-bold">₹6/piece</span>
-                      <button className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition-colors duration-300">View Details</button>
+                      <span className="text-red-600 font-bold">₹6/piece</span>
+                      <button className="bg-yellow-400 text-black font-bold px-4 py-2 rounded hover:bg-yellow-700 transition-colors duration-300">View Details</button>
                     </div>
                   </div>
                 </div>
@@ -255,8 +258,8 @@ export default function BusinessLandingPage() {
                     <h3 className="text-xl font-bold mb-2">Wedding Tents</h3>
                     <p className="text-gray-700 mb-4">Elegant tent arrangements for weddings with customizable decorations and seating.</p>
                     <div className="flex justify-between items-center">
-                      <span className="text-red-600 font-bold">Custom Pricing</span>
-                      <button className="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700 transition-colors duration-300">Inquire</button>
+                      <span className="text-blue-600 font-bold">Custom Pricing</span>
+                      <button className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition-colors duration-300">Inquire</button>
                     </div>
                   </div>
                 </div>
@@ -269,8 +272,8 @@ export default function BusinessLandingPage() {
                     <h3 className="text-xl font-bold mb-2">Corporate Events</h3>
                     <p className="text-gray-700 mb-4">Professional tent setups and catering services for corporate events and business functions.</p>
                     <div className="flex justify-between items-center">
-                      <span className="text-red-600 font-bold">Custom Pricing</span>
-                      <button className="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700 transition-colors duration-300">Inquire</button>
+                      <span className="text-blue-600 font-bold">Custom Pricing</span>
+                      <button className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition-colors duration-300">Inquire</button>
                     </div>
                   </div>
                 </div>
@@ -283,8 +286,8 @@ export default function BusinessLandingPage() {
                     <h3 className="text-xl font-bold mb-2">Premium Catering</h3>
                     <p className="text-gray-700 mb-4">Delicious catering options with a variety of cuisines available for all types of events.</p>
                     <div className="flex justify-between items-center">
-                      <span className="text-red-600 font-bold">₹450/plate</span>
-                      <button className="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700 transition-colors duration-300">View Menu</button>
+                      <span className="text-blue-600 font-bold">₹450/plate</span>
+                      <button className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition-colors duration-300">View Menu</button>
                     </div>
                   </div>
                 </div>
@@ -297,7 +300,7 @@ export default function BusinessLandingPage() {
       {/* Services Section */}
       <section ref={servicesRef} className="py-16 bg-gray-100">
         <div className="container mx-auto px-4">
-          <h2 className={`text-3xl font-bold text-center mb-12 border-b-4 ${activeTab === 'materials' ? 'border-blue-600' : 'border-red-600'} pb-2 inline-block transition-all duration-300`}>
+          <h2 className={`text-3xl font-bold text-center mb-12 border-b-4 ${activeTab === 'materials' ? 'border-yellow-600' : 'border-blue-600'} pb-2 inline-block transition-all duration-300`}>
             {activeTab === 'materials' ? 'Our Services' : 'Event Packages'}
           </h2>
           
@@ -311,7 +314,7 @@ export default function BusinessLandingPage() {
                   <div className="w-full md:w-2/3">
                     <h3 className="text-xl font-bold mb-2">Fast Delivery</h3>
                     <p className="text-gray-700 mb-4">We provide quick and reliable delivery services for all our building materials to your construction site.</p>
-                    <button className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition-colors duration-300">Learn More</button>
+                    <button className="bg-yellow-600 text-white px-4 py-2 rounded hover:bg-yellow-700 transition-colors duration-300">Learn More</button>
                   </div>
                 </div>
                 
@@ -322,7 +325,7 @@ export default function BusinessLandingPage() {
                   <div className="w-full md:w-2/3">
                     <h3 className="text-xl font-bold mb-2">Expert Consultation</h3>
                     <p className="text-gray-700 mb-4">Our experts provide valuable advice on selecting the right materials for your specific construction needs.</p>
-                    <button className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition-colors duration-300">Book Consultation</button>
+                    <button className="bg-yellow-600 text-white px-4 py-2 rounded hover:bg-yellow-700 transition-colors duration-300">Book Consultation</button>
                   </div>
                 </div>
               </>
@@ -335,7 +338,7 @@ export default function BusinessLandingPage() {
                   <div className="w-full md:w-2/3">
                     <h3 className="text-xl font-bold mb-2">Wedding Package</h3>
                     <p className="text-gray-700 mb-4">Complete wedding solution including elegant tent setup, premium catering, and customized decorations.</p>
-                    <button className="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700 transition-colors duration-300">Get Quote</button>
+                    <button className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition-colors duration-300">Get Quote</button>
                   </div>
                 </div>
                 
@@ -346,7 +349,7 @@ export default function BusinessLandingPage() {
                   <div className="w-full md:w-2/3">
                     <h3 className="text-xl font-bold mb-2">Corporate Event Package</h3>
                     <p className="text-gray-700 mb-4">Professional arrangements for corporate events with customized branding and high-quality catering.</p>
-                    <button className="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700 transition-colors duration-300">Get Quote</button>
+                    <button className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition-colors duration-300">Get Quote</button>
                   </div>
                 </div>
               </>
@@ -407,7 +410,7 @@ export default function BusinessLandingPage() {
           <div className="mt-16">
             <h3 className="text-2xl font-bold text-center mb-8">Our Achievements</h3>
             <div className="grid grid-cols-1 md:grid-cols-4 gap-6 text-center">
-              <div className={`${activeTab === 'materials' ? 'bg-blue-600' : 'bg-red-600'} p-6 rounded-xl shadow-lg transform transition-all duration-500 hover:scale-105 hover:shadow-xl`}>
+              <div className={`${activeTab === 'materials' ? 'bg-yellow-600' : 'bg-blue-600'} p-6 rounded-xl shadow-lg transform transition-all duration-500 hover:scale-105 hover:shadow-xl`}>
                 <div className="text-4xl font-bold mb-2">500+</div>
                 <p>Projects Completed</p>
               </div>
@@ -415,7 +418,7 @@ export default function BusinessLandingPage() {
                 <div className="text-4xl font-bold mb-2">98%</div>
                 <p>Customer Satisfaction</p>
               </div>
-              <div className={`${activeTab === 'materials' ? 'bg-blue-600' : 'bg-red-600'} p-6 rounded-xl shadow-lg transform transition-all duration-500 hover:scale-105 hover:shadow-xl`}>
+              <div className={`${activeTab === 'materials' ? 'bg-yellow-600' : 'bg-blue-600'} p-6 rounded-xl shadow-lg transform transition-all duration-500 hover:scale-105 hover:shadow-xl`}>
                 <div className="text-4xl font-bold mb-2">10+</div>
                 <p>Years of Experience</p>
               </div>
