@@ -15,16 +15,17 @@ export default function BusinessLandingPage() {
   
   // Images for building materials
   const materialSlides = [
-    { id: 1, alt: "Premium cement products", description: "High-quality cement for all construction needs" },
-    { id: 2, alt: "Construction materials display", description: "Wide range of building materials available" },
-    { id: 3, alt: "Steel reinforcement bars", description: "Durable steel products for construction" }
+    { id: 1, img: "/Images/ultratech-hero.png", alt: "Premium cement products", description: "High-quality cement for all construction needs" },
+    { id: 2, img: "/Images/acc-hero.jpg", alt: "Construction materials display", description: "Wide range of building materials available" },
+    { id: 3, img: "/Images/acc-bori.jpg", alt: "Steel reinforcement bars", description: "Durable steel products for construction" }
   ];
   
   // Images for tent and catering
   const cateringSlides = [
-    { id: 1, alt: "Elegant wedding setup", description: "Beautiful wedding tent arrangements" },
-    { id: 2, alt: "Corporate event catering", description: "Professional catering services for corporate events" },
-    { id: 3, alt: "Birthday party setup", description: "Colorful tent and catering setup for celebrations" }
+    { id: 1, img: "/Images/raj-birthdayImg2.jpg", alt: "Birthday party setup", description: "Colorful tent and catering setup for celebrations" },
+    // { id: 1, img: "/Images/raj-birthdayImg2.jpg", alt: "Elegant wedding setup", description: "Beautiful wedding tent arrangements" },
+    { id: 2,  img: "/Images/raj-img1.jpg",alt: "Corporate event catering", description: "Professional catering services for corporate events" },
+    { id: 3,  img: "/Images/raj-banner.jpg",alt: "Birthday party setup", description: "Colorful tent and catering setup for celebrations" }
   ];
   
   // Get the current slides based on active tab
@@ -153,7 +154,8 @@ export default function BusinessLandingPage() {
                     className={`absolute top-0 left-0 w-full h-full transition-opacity duration-1000 ease-in-out ${index === currentSlide ? 'opacity-100' : 'opacity-0'}`}
                   >
                     <div className="bg-gray-300 w-full h-full flex items-center justify-center">
-                      <span className="text-lg">{slide.alt}</span>
+                    <img src={slide.img} alt="slide" className="w-full h-full object-cover" />
+
                     </div>
                     <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-60 text-white p-4">
                       <p>{slide.description}</p>
