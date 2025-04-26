@@ -73,7 +73,7 @@ export default function BusinessLandingPage() {
   const accentColor = activeTab === 'materials' ? 'text-blue-600' : 'text-red-600';
 
   return (
-    <div className="min-h-screen bg-gray-50 font-sans">
+    <div className="min-h-screen bg-gray-50  font-gilroy">
       {/* Navigation bar */}
       <nav className="bg-gray-900 text-white p-4 shadow-lg sticky top-0 z-50 transition-all duration-300">
         <div className="container mx-auto flex justify-between items-center">
@@ -121,15 +121,15 @@ export default function BusinessLandingPage() {
         {/* Background Layer with multiple images */}
         <div
           className="absolute inset-0 z-0 bg-cover bg-center opacity-60 "
-          // style={{
-          //   backgroundImage:
-          //     activeTab === 'materials'
-          //       ? "url('/Images/cement.jpg'), url('/Images/acc-hero.jpg')"
-          //       : "url('/Images/raj-img1.jpg'), url('/Images/tent.jpg')",
-          //   backgroundSize: 'cover',
-          //   backgroundRepeat: 'no-repeat',
-          //   backgroundPosition: 'center',
-          // }}
+          style={{
+            backgroundImage:
+              activeTab === 'materials'
+                ? "url('/Images/cement.jpg'), url('/Images/acc-hero.jpg')"
+                : "url('/Images/raj-img1.jpg'), url('/Images/tent.jpg')",
+            backgroundSize: 'cover',
+            backgroundRepeat: 'no-repeat',
+            backgroundPosition: 'center',
+          }}
         ></div>
 
         <div className="relative z-10 container mx-auto px-4">
@@ -150,21 +150,21 @@ export default function BusinessLandingPage() {
                  </>
                   }
               </h1>
-              </div>
-              <p className="text-lg mb-8 transition-all duration-500">
+              </div> 
+              <p className="text-lg mb-8 transition-all duration-500  font-gilroy">
                 {activeTab === 'materials' ?
                   'Providing high-quality building materials including cement, steel, and more to make your construction project successful.' :
                   'Creating memorable experiences with elegant tent setups and delicious catering for all your special occasions.'}
               </p>
-              <div className="flex space-x-4">
+              <div className="flex space-x-4 text-lg font">
                 <button
-                  className={`px-6 py-3 rounded-md font-medium transition-all duration-300 ${activeTab === 'materials' ? 'bg-gray-900 text-white' : 'bg-white text-gray-900 hover:bg-gray-100'}`}
+                  className={`px-6 py-3 rounded-md font-bold transition-all duration-300 ${activeTab === 'materials' ? 'bg-gray-900 text-white' : 'bg-white text-gray-900 hover:bg-gray-100'}`}
                   onClick={() => setActiveTab('materials')}
                 >
                   Building Materials
                 </button>
                 <button
-                  className={`px-6 py-3 rounded-md font-medium transition-all duration-300 ${activeTab === 'catering' ? 'bg-gray-900 text-white' : 'bg-white text-gray-900 hover:bg-gray-100'}`}
+                  className={`px-6 py-3 rounded-md font-bold transition-all duration-300 ${activeTab === 'catering' ? 'bg-gray-900 text-white' : 'bg-white text-gray-900 hover:bg-gray-100'}`}
                   onClick={() => setActiveTab('catering')}
                 >
                   Tent & Catering
@@ -229,7 +229,7 @@ export default function BusinessLandingPage() {
                 <div className="bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-500 hover:scale-105 hover:shadow-xl">
                   <div className="h-48 bg-gray-300 flex items-center justify-center">
                     {/* <span>Bricks & Blocks</span> */}
-                    <img src="/Images/acc-bori3.jpg" alt="Premium Cement" className="w-full h-full object-cover" />
+                    <img src="/Images/ultratech-bori2.jpg" alt="Premium Cement" className="w-full h-full object-cover" />
                   </div>
                   <div className="p-6">
                     <h3 className="text-xl font-bold mb-2">Bricks & Blocks</h3>
@@ -245,7 +245,8 @@ export default function BusinessLandingPage() {
               <>
                 <div className="bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-500 hover:scale-105 hover:shadow-xl">
                   <div className="h-48 bg-gray-300 flex items-center justify-center">
-                    <span>Wedding Tents</span>
+                    {/* <span>Wedding Tents</span> */}
+                    <img src="/Images/raj-banner.jpg" alt="Premium Cement" className="w-full h-full object-cover" />
                   </div>
                   <div className="p-6">
                     <h3 className="text-xl font-bold mb-2">Wedding Tents</h3>
@@ -259,10 +260,11 @@ export default function BusinessLandingPage() {
 
                 <div className="bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-500 hover:scale-105 hover:shadow-xl">
                   <div className="h-48 bg-gray-300 flex items-center justify-center">
-                    <span>Corporate Events</span>
+                    {/* <span>Birthday Events</span> */}
+                    <img src="/Images/raj-birthdayImg2.jpg" alt="Premium Cement" className="w-full h-full object-cover" />
                   </div>
                   <div className="p-6">
-                    <h3 className="text-xl font-bold mb-2">Corporate Events</h3>
+                    <h3 className="text-xl font-bold mb-2">Birthday Events</h3>
                     <p className="text-gray-700 mb-4">Professional tent setups and catering services for corporate events and business functions.</p>
                     <div className="flex justify-between items-center">
                       <span className="text-blue-600 font-bold">Custom Pricing</span>
@@ -273,7 +275,8 @@ export default function BusinessLandingPage() {
 
                 <div className="bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-500 hover:scale-105 hover:shadow-xl">
                   <div className="h-48 bg-gray-300 flex items-center justify-center">
-                    <span>Premium Catering</span>
+                    {/* <span>Premium Catering</span>? */}
+                    <img src="/Images/raj-professional.jpg" alt="Premium Cement" className="w-full h-full object-cover" />
                   </div>
                   <div className="p-6">
                     <h3 className="text-xl font-bold mb-2">Premium Catering</h3>
