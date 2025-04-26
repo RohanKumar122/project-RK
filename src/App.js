@@ -141,12 +141,12 @@ export default function BusinessLandingPage() {
               <h1 className="text-4xl md:text-5xl font-bold mb-4 transition-all duration-500 font-gilroy ">
                 {activeTab === 'materials' ?
                  <>
-                 Quality  <strong className='text-yellow-500  md:text-amber-400 md:bg-black mx-1 md:px-2 md:rounded-md'>
+                 Quality  <strong className='text-amber-400 bg-black mx-1 mpx-2 rounded-md'>
                   
                   Building Materials </strong> for Your Construction Needs  
                  </>:
                  <>
-                 Premium <strong  className='text-blue-500  md:text-blue-400 md:bg-black mx-1 md:px-2 md:rounded-md'>Tent & Catering</strong> Services for Your Special Events
+                 Premium <strong  className='  text-blue-400 bg-black mx-1 px-2 rounded-md'>Tent & Catering</strong> Services for Your Special Events
                  </>
                   }
               </h1>
@@ -156,7 +156,7 @@ export default function BusinessLandingPage() {
                   'Providing high-quality building materials including cement, steel, and more to make your construction project successful.' :
                   'Creating memorable experiences with elegant tent setups and delicious catering for all your special occasions.'}
               </p>
-              <div className="flex space-x-4 text-lg font">
+              <div className="flex space-x-4  font">
                 <button
                   className={`px-6 py-3 rounded-md font-bold transition-all duration-300 ${activeTab === 'materials' ? 'bg-gray-900 text-white' : 'bg-white text-gray-900 hover:bg-gray-100'}`}
                   onClick={() => setActiveTab('materials')}
@@ -187,9 +187,9 @@ export default function BusinessLandingPage() {
       </section>
 
       {/* Products Section */}
-      <section ref={productsRef} className="py-16 bg-white">
+      <section ref={productsRef} className="py-16 bg-gray-300">
         <div className="container mx-auto px-4">
-          <h2 className={`text-3xl font-bold text-center mb-12 border-b-4 ${activeTab === 'materials' ? 'border-blue-600' : 'border-blue-600'} pb-2 inline-block transition-all duration-300`}>
+          <h2 className={`text-3xl font-bold text-center mb-12 border-b-4 ${activeTab === 'materials' ? 'border-amber-500' : 'border-blue-600'} pb-2 inline-block transition-all duration-300`}>
             {activeTab === 'materials' ? 'Our Building Materials' : 'Our Services'}
           </h2>
 
