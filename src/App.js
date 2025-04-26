@@ -115,21 +115,21 @@ export default function BusinessLandingPage() {
       </nav>
 
       {/* Hero Section with Business Toggle */}
-      <section ref={homeRef} className={`relative ${activeTab === 'materials' ? 'bg-gradient-to-r from-gray-400 to-gray-200' : 'bg-gradient-to-r from-blue-400 to-blue-200'} ${activeTab === 'materials' ? 'bg-gradient-to-r from-blue-800 to-blue-600' : 'bg-gradient-to-r from-blue-700 to-blue-500  text-gray-100'} text-black py-16 transition-all duration-500`}
+      <section ref={homeRef} className={`relative ${activeTab === 'materials' ? 'bg-gradient-to-r from-yellow-600 to-yellow-200' : 'bg-gradient-to-r from-blue-400 to-blue-200'} ${activeTab === 'materials' ? 'bg-gradient-to-r from-blue-800 to-blue-600' : 'bg-gradient-to-r from-blue-700 to-blue-500  text-gray-100'} text-black py-16 transition-all duration-500`}
 
       >
         {/* Background Layer with multiple images */}
         <div
           className="absolute inset-0 z-0 bg-cover bg-center opacity-60 "
-          style={{
-            backgroundImage:
-              activeTab === 'materials'
-                ? "url('/Images/cement.jpg'), url('/Images/acc-hero.jpg')"
-                : "url('/Images/raj-img1.jpg'), url('/Images/tent.jpg')",
-            backgroundSize: 'cover',
-            backgroundRepeat: 'no-repeat',
-            backgroundPosition: 'center',
-          }}
+          // style={{
+          //   backgroundImage:
+          //     activeTab === 'materials'
+          //       ? "url('/Images/cement.jpg'), url('/Images/acc-hero.jpg')"
+          //       : "url('/Images/raj-img1.jpg'), url('/Images/tent.jpg')",
+          //   backgroundSize: 'cover',
+          //   backgroundRepeat: 'no-repeat',
+          //   backgroundPosition: 'center',
+          // }}
         ></div>
 
         <div className="relative z-10 container mx-auto px-4">
@@ -145,7 +145,10 @@ export default function BusinessLandingPage() {
                   
                   Building Materials </strong> for Your Construction Needs  
                  </>:
-                  'Premium Tent & Catering Services for Your Special Events'}
+                 <>
+                 Premium <strong  className='text-blue-500  md:text-blue-400 md:bg-black mx-1 md:px-2 md:rounded-md'>Tent & Catering</strong> Services for Your Special Events
+                 </>
+                  }
               </h1>
               </div>
               <p className="text-lg mb-8 transition-all duration-500">
@@ -171,33 +174,12 @@ export default function BusinessLandingPage() {
 
             {/* Image Carousel */}
             <div className="md:w-1/2 relative">
-              <div className="relative h-64 md:h-96 overflow-hidden rounded-xl shadow-2xl">
+              {/* <div className="relative h-64 md:h-96 overflow-hidden rounded-xl shadow-2xl"> */}
+              <div className="relative h-64 md:h-96 ">
              
 
                 {/* Navigation arrows */}
-                <button
-                  onClick={prevSlide}
-                  className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full hover:bg-opacity-75 transition-all duration-300"
-                >
-                  <ChevronLeft size={24} />
-                </button>
-                <button
-                  onClick={nextSlide}
-                  className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full hover:bg-opacity-75 transition-all duration-300"
-                >
-                  <ChevronRight size={24} />
-                </button>
-
-                {/* Slide indicators */}
-                <div className="absolute bottom-16 left-0 right-0 flex justify-center space-x-2">
-                  {slides.map((_, index) => (
-                    <button
-                      key={index}
-                      onClick={() => setCurrentSlide(index)}
-                      className={`w-3 h-3 rounded-full transition-all duration-300 ${index === currentSlide ? 'bg-amber-400 scale-125' : 'bg-white bg-opacity-50'}`}
-                    />
-                  ))}
-                </div>
+    
               </div>
             </div>
           </div>
