@@ -86,11 +86,11 @@ const Products = ({ productsRef }) => {
                                         <span className="text-gray-400 text-sm font-medium ml-1">/{item.unit}</span>
                                     </div>
                                     <motion.button
-                                        whileHover={{ scale: 1.1 }}
-                                        whileTap={{ scale: 0.9 }}
-                                        className={`p-3 rounded-2xl ${isMaterials ? 'bg-blue-700' : 'bg-red-600'} text-white shadow-lg`}
+                                        // whileHover={{ scale: 1.1 }}
+                                        // whileTap={{ scale: 0.9 }}
+                                        // className={`p-3 rounded-2xl ${isMaterials ? 'bg-blue-700' : 'bg-red-600'} text-white shadow-lg`}
                                     >
-                                        <ShoppingCart size={20} />
+                                        {/* <ShoppingCart size={20} /> */}
                                     </motion.button>
                                 </div>
                             </div>

@@ -34,7 +34,8 @@ const Navbar = ({ scrollToSection, refs }) => {
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           whileHover={{ scale: 1.02 }}
-          className="flex items-center space-x-2 cursor-pointer"
+          onClick={() => scrollToSection(refs.homeRef)}
+          className="flex items-center space-x-2 cursor-pointer relative z-[70]"
         >
           <div className={`p-2 rounded-xl shadow-lg transition-colors duration-500 ${isMaterials ? 'bg-amber-500' : 'bg-blue-500'}`}>
             {isMaterials ? <ShoppingBag size={24} className="text-white" /> : <Utensils size={24} className="text-white" />}
@@ -97,8 +98,28 @@ const Navbar = ({ scrollToSection, refs }) => {
 
         {/* Mobile Toggle */}
         <div className="lg:hidden flex items-center space-x-4">
-          <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="text-white">
-            {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
+          <button
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className="text-white p-2 -mr-2 relative z-[70] focus:outline-none"
+            aria-label="Toggle Menu"
+          >
+            <div className="relative w-8 h-8 flex items-center justify-center">
+              <motion.div
+                animate={isMenuOpen ? { opacity: 0, rotate: 90 } : { opacity: 1, rotate: 0 }}
+                transition={{ duration: 0.2 }}
+                className="absolute"
+              >
+                <Menu size={32} />
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, rotate: -90 }}
+                animate={isMenuOpen ? { opacity: 1, rotate: 0 } : { opacity: 0, rotate: -90 }}
+                transition={{ duration: 0.2 }}
+                className="absolute"
+              >
+                <X size={32} />
+              </motion.div>
+            </div>
           </button>
         </div>
       </div>
@@ -107,46 +128,56 @@ const Navbar = ({ scrollToSection, refs }) => {
       <AnimatePresence>
         {isMenuOpen && (
           <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
-            className="lg:hidden glass-dark border-t border-gray-800 overflow-hidden"
+            initial={{ opacity: 0, scale: 1.1 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 1.1 }}
+            className="fixed inset-0 w-full h-screen bg-gray-900 z-50 overflow-y-auto lg:hidden pt-24"
           >
-            <div className="container mx-auto px-6 py-8 flex flex-col space-y-6">
+            <div className="container mx-auto px-6 py-8 flex flex-col space-y-8">
               {navLinks.map((link) => (
-                <button
+                <motion.button
                   key={link.name}
+                  whileTap={{ scale: 0.95 }}
                   onClick={() => {
                     scrollToSection(link.ref);
                     setIsMenuOpen(false);
                   }}
-                  className="text-xl text-left text-gray-200 font-bold"
+                  className="text-4xl text-left text-white font-black tracking-tight border-b border-white/5 pb-4"
                 >
                   {link.name}
-                </button>
+                </motion.button>
               ))}
-              <div className="flex bg-gray-800 p-1 rounded-xl border border-gray-700">
-                <button
-                  onClick={() => toggleTheme('materials')}
-                  className={`flex-1 py-3 rounded-lg text-sm font-bold transition-all ${activeTab === 'materials' ? 'bg-amber-500 text-white' : 'text-gray-400'
-                    }`}
-                >
-                  Building Materials
-                </button>
-                <button
-                  onClick={() => toggleTheme('catering')}
-                  className={`flex-1 py-3 rounded-lg text-sm font-bold transition-all ${activeTab === 'catering' ? 'bg-blue-500 text-white' : 'text-gray-400'
-                    }`}
-                >
-                  Tent & Catering
-                </button>
+
+              <div className="pt-4">
+                <p className="text-gray-500 font-bold uppercase tracking-widest text-[10px] mb-4">Switch Business</p>
+                <div className="flex bg-white/5 p-1 rounded-2xl border border-white/10">
+                  <button
+                    onClick={() => toggleTheme('materials')}
+                    className={`flex-1 py-4 rounded-xl text-xs font-black transition-all ${activeTab === 'materials' ? 'bg-amber-500 text-blue-900 shadow-xl' : 'text-gray-400'
+                      }`}
+                  >
+                    Building Materials
+                  </button>
+                  <button
+                    onClick={() => toggleTheme('catering')}
+                    className={`flex-1 py-4 rounded-xl text-xs font-black transition-all ${activeTab === 'catering' ? 'bg-blue-500 text-white shadow-xl' : 'text-gray-400'
+                      }`}
+                  >
+                    Events & Catering
+                  </button>
+                </div>
               </div>
+
               <a
                 href="tel:+919794202020"
-                className={`w-full py-4 rounded-xl font-bold text-white text-center ${isMaterials ? 'bg-blue-700' : 'bg-red-600'
+                className={`w-full py-5 rounded-2xl font-black text-xl text-white text-center shadow-2xl ${isMaterials ? 'bg-blue-700' : 'bg-red-600'
                   }`}>
-                Contact Us Now
+                Call Our Experts Now
               </a>
+
+              <div className="pt-8 text-center">
+                <p className="text-gray-500 text-[10px] font-bold uppercase tracking-[0.2em]">© 2026 RK & Raj Services</p>
+              </div>
             </div>
           </motion.div>
         )}
